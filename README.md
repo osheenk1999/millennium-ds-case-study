@@ -1,6 +1,6 @@
 # CORE — Candidate Overview & Recruiting Engine
 
-A searchable candidate platform for Millennium Management's Business Development team. Built as a submission for the 2025 Data Science Case Study.
+A searchable candidate platform (demo) for Millennium Management's Business Development Data Science team.
 
 ## Live App
 
