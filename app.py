@@ -5,6 +5,8 @@ Millennium Management · Business Development
 
 import json
 import html
+import io
+import csv as _csv
 from pathlib import Path
 
 import streamlit as st
@@ -23,26 +25,16 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-    html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;
-    }
+    html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-    [data-testid="stAppViewContainer"] {
-        background: #f4f6fa;
-    }
+    [data-testid="stAppViewContainer"] { background: #f4f6fa; }
 
     /* ── Sidebar ── */
-    [data-testid="stSidebar"] {
-        background: #0c1a2e;
-    }
-    /* All sidebar text white */
+    [data-testid="stSidebar"] { background: #0c1a2e; }
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] span,
     [data-testid="stSidebar"] label,
-    [data-testid="stSidebar"] div {
-        color: #e0e8f4 !important;
-    }
-    /* Filter labels */
+    [data-testid="stSidebar"] div { color: #e0e8f4 !important; }
     [data-testid="stSidebar"] .stMultiSelect label,
     [data-testid="stSidebar"] .stSlider label,
     [data-testid="stSidebar"] .stCheckbox label,
@@ -53,7 +45,6 @@ st.markdown("""
         text-transform: uppercase;
         letter-spacing: 0.07em;
     }
-    /* Sidebar input fields — visible text */
     [data-testid="stSidebar"] input,
     [data-testid="stSidebar"] .stTextInput input {
         color: #0c1a2e !important;
@@ -61,24 +52,11 @@ st.markdown("""
         border: 1.5px solid #2e5080 !important;
         border-radius: 6px !important;
     }
-    /* Multiselect chips */
-    [data-testid="stSidebar"] [data-baseweb="tag"] {
-        background: #1e3a5f !important;
-    }
-    [data-testid="stSidebar"] [data-baseweb="tag"] span {
-        color: #aecdee !important;
-    }
-    /* Multiselect dropdown text */
-    [data-testid="stSidebar"] [data-baseweb="select"] input {
-        color: #0c1a2e !important;
-    }
-    [data-testid="stSidebar"] [data-baseweb="popover"] * {
-        color: #0c1a2e !important;
-    }
-    /* Divider */
-    [data-testid="stSidebar"] hr {
-        border-color: #1e3358 !important;
-    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] { background: #1e3a5f !important; }
+    [data-testid="stSidebar"] [data-baseweb="tag"] span { color: #aecdee !important; }
+    [data-testid="stSidebar"] [data-baseweb="select"] input { color: #0c1a2e !important; }
+    [data-testid="stSidebar"] [data-baseweb="popover"] * { color: #0c1a2e !important; }
+    [data-testid="stSidebar"] hr { border-color: #1e3358 !important; }
 
     /* ── Cards ── */
     .c-card {
@@ -88,18 +66,8 @@ st.markdown("""
         margin-bottom: 0.65rem;
         border: 1px solid #dde4ef;
     }
-    .c-name {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #0c1a2e;
-        margin: 0 0 0.15rem 0;
-        line-height: 1.3;
-    }
-    .c-role {
-        font-size: 0.8rem;
-        color: #4a6080;
-        margin: 0 0 0.7rem 0;
-    }
+    .c-name  { font-size:1rem; font-weight:700; color:#0c1a2e; margin:0 0 0.15rem 0; line-height:1.3; }
+    .c-role  { font-size:0.8rem; color:#4a6080; margin:0 0 0.7rem 0; }
     .tag {
         display: inline-block;
         border-radius: 4px;
@@ -113,47 +81,41 @@ st.markdown("""
     .tag-green   { background:#e6f4ec; color:#1a6b38; }
     .tag-amber   { background:#fdf3e0; color:#7a5000; }
     .tag-red     { background:#fdecea; color:#8b1a1a; }
-    .c-summary {
-        font-size: 0.8rem;
-        color: #4a6080;
-        margin: 0.5rem 0 0.55rem 0;
-        line-height: 1.55;
+    .tag-warn    { background:#fff4e0; color:#8a5000; border: 1px solid #f5c97a; }
+    .c-summary { font-size:0.8rem; color:#4a6080; margin:0.5rem 0 0.55rem 0; line-height:1.55; }
+    .c-meta    { font-size:0.72rem; color:#8096b4; border-top:1px solid #edf0f6;
+                 padding-top:0.5rem; margin-top:0.1rem; }
+    .c-meta strong { color:#3a5a8a; }
+
+    /* Profile expand table */
+    .profile-table { width:100%; border-collapse:collapse; font-size:0.78rem; margin-top:0.5rem; }
+    .profile-table td { padding:0.35rem 0.5rem; border-bottom:1px solid #edf0f6; vertical-align:top; }
+    .profile-table td:first-child { color:#7a9cc4; font-weight:600; width:30%; white-space:nowrap; }
+    .profile-table td:last-child  { color:#2a3a50; }
+
+    /* Similar candidates */
+    .sim-card {
+        background:#f8fafd; border:1px solid #dde4ef; border-radius:8px;
+        padding:0.7rem 0.9rem; margin-bottom:0.4rem;
     }
-    .c-meta {
-        font-size: 0.72rem;
-        color: #8096b4;
-        border-top: 1px solid #edf0f6;
-        padding-top: 0.5rem;
-        margin-top: 0.1rem;
-    }
-    .c-meta strong { color: #3a5a8a; }
+    .sim-name { font-size:0.82rem; font-weight:700; color:#0c1a2e; }
+    .sim-sub  { font-size:0.72rem; color:#6a80a0; margin-top:0.1rem; }
 
     /* ── Metrics ── */
-    .metric-row {
-        display: flex;
-        gap: 0.75rem;
-        margin-bottom: 1.25rem;
-    }
+    .metric-row { display:flex; gap:0.75rem; margin-bottom:1.25rem; }
     .metric-card {
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 0.85rem 1rem;
-        flex: 1;
-        border: 1px solid #dde4ef;
-        text-align: center;
+        background:#ffffff; border-radius:10px; padding:0.85rem 1rem;
+        flex:1; border:1px solid #dde4ef; text-align:center;
     }
-    .metric-val   { font-size: 1.7rem; font-weight: 800; color: #0c1a2e; line-height: 1; }
-    .metric-lbl   { font-size: 0.65rem; color: #8096b4; text-transform: uppercase;
-                    letter-spacing: 0.07em; margin-top: 0.25rem; font-weight: 600; }
+    .metric-val { font-size:1.7rem; font-weight:800; color:#0c1a2e; line-height:1; }
+    .metric-lbl { font-size:0.65rem; color:#8096b4; text-transform:uppercase;
+                  letter-spacing:0.07em; margin-top:0.25rem; font-weight:600; }
 
     /* ── Page title ── */
-    .page-title    { font-size: 1.5rem; font-weight: 800; color: #0c1a2e; margin:0; letter-spacing:-0.02em; }
-    .page-sub      { font-size: 0.8rem; color: #8096b4; margin: 0.15rem 0 1.2rem 0; }
+    .page-title { font-size:1.5rem; font-weight:800; color:#0c1a2e; margin:0; letter-spacing:-0.02em; }
+    .page-sub   { font-size:0.8rem; color:#8096b4; margin:0.15rem 0 1.2rem 0; }
 
-    /* ── Misc ── */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+    #MainMenu {visibility:hidden;} footer {visibility:hidden;} header {visibility:hidden;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -170,6 +132,7 @@ def load_candidates():
         records.append({
             "name":               c.get("name", "Unknown"),
             "email":              c.get("email") or "",
+            "phone":              c.get("phone") or "",
             "location":           c.get("location") or "",
             "geography":          c.get("geography", "Other"),
             "languages":          c.get("languages", []),
@@ -202,6 +165,47 @@ def list_vals(candidates, field):
     return sorted(vals)
 
 
+def field_completeness(c):
+    """Return (filled, total) count of key profile fields."""
+    key_fields = [
+        c["name"], c["email"], c["phone"], c["location"],
+        c["geography"], c["seniority"], c["primary_strategy"],
+        c["summary"], c["years_experience"],
+        bool(c["credentials"]), bool(c["technical_skills"]),
+        bool(c["primary_sectors"]), bool(c["experience"]),
+        bool(c["education"]), bool(c["notable_firms"]),
+        bool(c["languages"]),
+    ]
+    filled = sum(1 for v in key_fields if v)
+    return filled, len(key_fields)
+
+
+def similar_candidates(target, all_candidates, n=3):
+    """Score candidates by overlap on sectors, strategy, seniority, market type."""
+    scores = []
+    for c in all_candidates:
+        if c["name"] == target["name"]:
+            continue
+        score = 0
+        # Sector overlap
+        score += len(set(target["primary_sectors"]) & set(c["primary_sectors"])) * 3
+        # Strategy match
+        if target["primary_strategy"] == c["primary_strategy"]:
+            score += 3
+        # Seniority match
+        if target["seniority"] == c["seniority"]:
+            score += 2
+        # Market type overlap
+        score += len(set(target["market_type"]) & set(c["market_type"]))
+        # Geography match
+        if target["geography"] == c["geography"]:
+            score += 1
+        if score > 0:
+            scores.append((score, c))
+    scores.sort(key=lambda x: -x[0])
+    return [c for _, c in scores[:n]]
+
+
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 
 def render_sidebar(candidates):
@@ -214,22 +218,19 @@ def render_sidebar(candidates):
         """, unsafe_allow_html=True)
 
         search_query = st.text_input("Search candidates", placeholder="Goldman, Python, healthcare...")
-
         st.divider()
 
         geography = st.multiselect("Geography", sorted(set(c["geography"] for c in candidates)))
         strategy  = st.multiselect("Investment Strategy", sorted(set(c["primary_strategy"] for c in candidates)))
         sectors   = st.multiselect("Sector Coverage", list_vals(candidates, "primary_sectors"))
         seniority = st.multiselect("Seniority", ["Junior (0-3 yrs)", "Mid-level (3-7 yrs)", "Senior (7+ yrs)"])
-
         st.divider()
 
-        years_range  = st.slider("Years of Experience", 0, 20, (0, 20))
-        credentials  = st.multiselect("Credentials", list_vals(candidates, "credentials"))
-        skills       = st.multiselect("Technical Skills", list_vals(candidates, "technical_skills"))
-        extra_langs  = [l for l in list_vals(candidates, "languages") if l.lower() != "english"]
-        languages    = st.multiselect("Additional Languages", extra_langs)
-
+        years_range = st.slider("Years of Experience", 0, 20, (0, 20))
+        credentials = st.multiselect("Credentials", list_vals(candidates, "credentials"))
+        skills      = st.multiselect("Technical Skills", list_vals(candidates, "technical_skills"))
+        extra_langs = [l for l in list_vals(candidates, "languages") if l.lower() != "english"]
+        languages   = st.multiselect("Additional Languages", extra_langs)
         st.divider()
 
         market_type = st.multiselect(
@@ -290,12 +291,10 @@ def apply_filters(candidates, f):
 # ── Candidate card ────────────────────────────────────────────────────────────
 
 def tag(text, cls="tag-default"):
-    t = html.escape(str(text))
-    return f'<span class="tag {cls}">{t}</span>'
+    return f'<span class="tag {cls}">{html.escape(str(text))}</span>'
 
 
-def render_card(c):
-    # Safely escape all user content
+def render_card(c, all_candidates):
     name     = html.escape(c["name"])
     location = html.escape(c["location"])
     summary  = html.escape(c["summary"])
@@ -314,9 +313,8 @@ def render_card(c):
     if location:
         role_line = f"{current_role} &nbsp;·&nbsp; {location}" if current_role else location
 
-    # Tags row
-    tags_html = ""
-    tags_html += tag(c["geography"])
+    # Tags
+    tags_html  = tag(c["geography"])
     tags_html += tag(c["primary_strategy"], "tag-amber")
     tags_html += tag(c["seniority"])
     for cr in c["credentials"][:3]:
@@ -324,20 +322,32 @@ def render_card(c):
     for s in c["primary_sectors"][:3]:
         tags_html += tag(s)
 
-    # Status badges (top-right)
-    badges = ""
-    if c["currently_employed"]:
-        badges += tag("Employed", "tag-green")
-    else:
-        badges += tag("Available", "tag-red")
+    # Status badges
+    badges  = tag("Employed", "tag-green") if c["currently_employed"] else tag("Available", "tag-red")
     if c["top_school"]:
         badges += tag("Top School", "tag-green")
+
+    # Data quality warnings
+    dq_warnings = []
+    if not c["email"]:
+        dq_warnings.append("no email")
+    if not c["phone"]:
+        dq_warnings.append("no phone")
+    filled, total = field_completeness(c)
+    completeness_pct = int(filled / total * 100)
+
+    dq_html = ""
+    if dq_warnings:
+        warn_str = html.escape(", ".join(dq_warnings))
+        dq_html = f'<span class="tag tag-warn" style="font-size:0.63rem;">⚠ {warn_str}</span>'
+    completeness_color = "#1a6b38" if completeness_pct >= 85 else "#7a5000" if completeness_pct >= 65 else "#8b1a1a"
+    completeness_html = f'<span style="font-size:0.65rem;color:{completeness_color};font-weight:600;">{completeness_pct}% complete</span>'
 
     # Meta row
     skills_str = html.escape(", ".join(c["technical_skills"][:5]) or "—")
     extra_langs = [l for l in c["languages"] if l.lower() != "english"]
-    lang_str = html.escape(", ".join(extra_langs[:3]))
-    yrs = c["years_experience"]
+    lang_str    = html.escape(", ".join(extra_langs[:3]))
+    yrs         = c["years_experience"]
 
     meta_parts = [f"<strong>Skills:</strong> {skills_str}"]
     if lang_str:
@@ -352,7 +362,7 @@ def render_card(c):
       <div class="c-name">{name}</div>
       <div class="c-role">{role_line}</div>
     </div>
-    <div style="flex-shrink:0;">{badges}</div>
+    <div style="flex-shrink:0;text-align:right;">{badges}<br><span style="display:inline-block;margin-top:0.3rem;">{dq_html} {completeness_html}</span></div>
   </div>
   <div style="margin-bottom:0.4rem;">{tags_html}</div>
   <div class="c-summary">{summary}</div>
@@ -360,17 +370,90 @@ def render_card(c):
 </div>
 """, unsafe_allow_html=True)
 
+    # ── Expandable full profile ───────────────────────────────────────────────
+    with st.expander("Full profile + similar candidates"):
+        pcol1, pcol2 = st.columns([3, 2])
+
+        with pcol1:
+            st.markdown("**Parsed Profile**")
+
+            # Education
+            edu_rows = ""
+            for e in c["education"]:
+                school = html.escape(e.get("school", ""))
+                deg    = html.escape(e.get("degree") or "")
+                field  = html.escape(e.get("field") or "")
+                yr     = e.get("year_end", "")
+                edu_rows += f"<tr><td>{school}</td><td>{deg} {field} {'· '+str(yr) if yr else ''}</td></tr>"
+
+            # Experience
+            exp_rows = ""
+            for e in c["experience"]:
+                firm    = html.escape(e.get("firm", ""))
+                role    = html.escape(e.get("role", ""))
+                start   = e.get("start_year", "")
+                end     = e.get("end_year", "Present") if e.get("current") else e.get("end_year", "")
+                sectors = html.escape(", ".join(e.get("sector", [])))
+                exp_rows += f"<tr><td>{firm} ({start}–{end})</td><td>{role}<br><span style='color:#8096b4;font-size:0.7rem;'>{sectors}</span></td></tr>"
+
+            contact_val = html.escape(c["email"] or "—")
+            phone_val   = html.escape(c["phone"] or "—")
+            skills_full = html.escape(", ".join(c["technical_skills"]) or "—")
+            firms_str   = html.escape(", ".join(c["notable_firms"]) or "—")
+            langs_str   = html.escape(", ".join(c["languages"]) or "—")
+            creds_str   = html.escape(", ".join(c["credentials"]) or "—")
+            mkt_str     = html.escape(", ".join(c["market_type"]) or "—")
+            sectors_str = html.escape(", ".join(c["primary_sectors"]) or "—")
+
+            st.markdown(f"""
+<table class="profile-table">
+  <tr><td>Contact</td><td>{contact_val} &nbsp;·&nbsp; {phone_val}</td></tr>
+  <tr><td>Market Side</td><td>{mkt_str}</td></tr>
+  <tr><td>Sectors</td><td>{sectors_str}</td></tr>
+  <tr><td>Credentials</td><td>{creds_str}</td></tr>
+  <tr><td>Technical Skills</td><td>{skills_full}</td></tr>
+  <tr><td>Languages</td><td>{langs_str}</td></tr>
+  <tr><td>Notable Firms</td><td>{firms_str}</td></tr>
+  <tr><td>Public Markets</td><td>{'Yes' if c['public_markets'] else 'No'}</td></tr>
+  <tr><td>Private Markets</td><td>{'Yes' if c['private_markets'] else 'No'}</td></tr>
+</table>
+
+<br><strong style="font-size:0.8rem;">Education</strong>
+<table class="profile-table" style="margin-top:0.3rem;">{edu_rows}</table>
+
+<br><strong style="font-size:0.8rem;">Experience</strong>
+<table class="profile-table" style="margin-top:0.3rem;">{exp_rows}</table>
+""", unsafe_allow_html=True)
+
+        with pcol2:
+            st.markdown("**Similar Candidates**")
+            similars = similar_candidates(c, all_candidates)
+            if similars:
+                for s in similars:
+                    s_name     = html.escape(s["name"])
+                    s_strategy = html.escape(s["primary_strategy"])
+                    s_seniority= html.escape(s["seniority"])
+                    s_sectors  = html.escape(", ".join(s["primary_sectors"][:2]))
+                    overlap    = set(c["primary_sectors"]) & set(s["primary_sectors"])
+                    overlap_str= html.escape(", ".join(overlap)) if overlap else "strategy overlap"
+                    st.markdown(f"""
+<div class="sim-card">
+  <div class="sim-name">{s_name}</div>
+  <div class="sim-sub">{s_strategy} · {s_seniority}</div>
+  <div class="sim-sub" style="margin-top:0.2rem;color:#8096b4;">Overlap: {overlap_str}</div>
+</div>
+""", unsafe_allow_html=True)
+            else:
+                st.markdown('<div style="font-size:0.8rem;color:#8096b4;">No similar profiles found.</div>', unsafe_allow_html=True)
+
 
 # ── Charts ────────────────────────────────────────────────────────────────────
 
 BLUES = ["#0c3060", "#1a5090", "#2e74bc", "#5b9bd5", "#8fbce8", "#c2daf5"]
-
 CHART_LAYOUT = dict(
-    plot_bgcolor="rgba(0,0,0,0)",
-    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
     font=dict(family="Inter, sans-serif", color="#2a3a50", size=11),
-    margin=dict(t=45, b=10, l=10, r=10),
-    height=290,
+    margin=dict(t=45, b=10, l=10, r=10), height=290,
 )
 
 
@@ -381,12 +464,8 @@ def render_charts(filtered):
         counts = {}
         for c in filtered:
             counts[c["primary_strategy"]] = counts.get(c["primary_strategy"], 0) + 1
-        fig = px.bar(
-            x=list(counts.keys()), y=list(counts.values()),
-            title="Strategy Breakdown",
-            labels={"x": "Strategy", "y": "# Candidates"},
-            color_discrete_sequence=["#2e74bc"],
-        )
+        fig = px.bar(x=list(counts.keys()), y=list(counts.values()),
+                     title="Strategy Breakdown", color_discrete_sequence=["#2e74bc"])
         fig.update_layout(**CHART_LAYOUT, showlegend=False)
         fig.update_xaxes(title_text="Strategy", tickfont_size=9)
         fig.update_yaxes(title_text="Candidates", tickfont_size=10, dtick=1)
@@ -396,11 +475,8 @@ def render_charts(filtered):
         geos = {}
         for c in filtered:
             geos[c["geography"]] = geos.get(c["geography"], 0) + 1
-        fig2 = px.pie(
-            names=list(geos.keys()), values=list(geos.values()),
-            title="Geographic Distribution",
-            color_discrete_sequence=BLUES, hole=0.42,
-        )
+        fig2 = px.pie(names=list(geos.keys()), values=list(geos.values()),
+                      title="Geographic Distribution", color_discrete_sequence=BLUES, hole=0.42)
         fig2.update_layout(**CHART_LAYOUT, legend=dict(font_size=10))
         fig2.update_traces(textfont_size=10, textposition="outside")
         st.plotly_chart(fig2, use_container_width=True)
@@ -411,12 +487,7 @@ def render_charts(filtered):
         sen_order = ["Junior (0-3 yrs)", "Mid-level (3-7 yrs)", "Senior (7+ yrs)"]
         labels    = ["Junior", "Mid-level", "Senior"]
         vals      = [sum(1 for c in filtered if c["seniority"] == s) for s in sen_order]
-        fig3 = px.bar(
-            x=labels, y=vals,
-            title="Seniority Mix",
-            labels={"x": "Level", "y": "# Candidates"},
-            color_discrete_sequence=["#0c3060"],
-        )
+        fig3 = px.bar(x=labels, y=vals, title="Seniority Mix", color_discrete_sequence=["#0c3060"])
         fig3.update_layout(**CHART_LAYOUT, showlegend=False)
         fig3.update_xaxes(title_text="Seniority Level")
         fig3.update_yaxes(title_text="Candidates", dtick=1)
@@ -429,13 +500,9 @@ def render_charts(filtered):
                 sector_counts[s] = sector_counts.get(s, 0) + 1
         top = sorted(sector_counts.items(), key=lambda x: -x[1])[:8]
         if top:
-            fig4 = px.bar(
-                x=[v for _, v in top], y=[s for s, _ in top],
-                orientation="h",
-                title="Sector Coverage",
-                labels={"x": "# Candidates", "y": "Sector"},
-                color_discrete_sequence=["#5b9bd5"],
-            )
+            fig4 = px.bar(x=[v for _, v in top], y=[s for s, _ in top],
+                          orientation="h", title="Sector Coverage",
+                          color_discrete_sequence=["#5b9bd5"])
             fig4.update_layout(**CHART_LAYOUT, showlegend=False)
             fig4.update_xaxes(title_text="Candidates", dtick=1)
             fig4.update_yaxes(title_text="", tickfont_size=9)
@@ -453,7 +520,12 @@ def main():
     col_t, col_n = st.columns([3, 1])
     with col_t:
         st.markdown('<div class="page-title">CORE</div>', unsafe_allow_html=True)
-        st.markdown('<div class="page-sub">Candidate Overview &amp; Recruiting Engine &nbsp;·&nbsp; Millennium Management BD &nbsp;·&nbsp; <span style="color:#b0c4de;">10 candidates · demo dataset</span></div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="page-sub">Candidate Overview &amp; Recruiting Engine &nbsp;·&nbsp; '
+            'Millennium Management BD &nbsp;·&nbsp; '
+            '<span style="color:#b0c4de;">10 candidates · demo dataset</span></div>',
+            unsafe_allow_html=True
+        )
     with col_n:
         st.markdown(f"""
         <div style="text-align:right;padding-top:0.4rem;">
@@ -462,10 +534,10 @@ def main():
         </div>""", unsafe_allow_html=True)
 
     # Metric strip
-    employed  = sum(1 for c in filtered if c["currently_employed"])
-    buy_side  = sum(1 for c in filtered if "buy_side" in c.get("market_type", []))
-    top_sch   = sum(1 for c in filtered if c["top_school"])
-    avg_exp   = round(sum(c["years_experience"] for c in filtered) / max(len(filtered), 1), 1)
+    employed = sum(1 for c in filtered if c["currently_employed"])
+    buy_side = sum(1 for c in filtered if "buy_side" in c.get("market_type", []))
+    top_sch  = sum(1 for c in filtered if c["top_school"])
+    avg_exp  = round(sum(c["years_experience"] for c in filtered) / max(len(filtered), 1), 1)
 
     st.markdown(f"""
 <div class="metric-row">
@@ -487,10 +559,8 @@ def main():
         )
     with col_exp:
         if filtered:
-            import io
-            import csv as _csv
             buf = io.StringIO()
-            flat = ["name","location","geography","seniority","years_experience",
+            flat = ["name","email","location","geography","seniority","years_experience",
                     "primary_strategy","currently_employed","top_school","market_type",
                     "primary_sectors","credentials","technical_skills","notable_firms","summary"]
             w = _csv.DictWriter(buf, fieldnames=flat)
@@ -498,13 +568,9 @@ def main():
             for c in filtered:
                 row = {k: (", ".join(c[k]) if isinstance(c[k], list) else c[k]) for k in flat}
                 w.writerow(row)
-            st.download_button(
-                "⬇ Export CSV",
-                data=buf.getvalue(),
-                file_name="core_candidates_filtered.csv",
-                mime="text/csv",
-                use_container_width=True,
-            )
+            st.download_button("⬇ Export CSV", data=buf.getvalue(),
+                               file_name="core_candidates_filtered.csv",
+                               mime="text/csv", use_container_width=True)
 
     # Sort
     seniority_order = {"Junior (0-3 yrs)": 0, "Mid-level (3-7 yrs)": 1, "Senior (7+ yrs)": 2}
@@ -525,7 +591,7 @@ def main():
             st.info("No candidates match the current filters.")
         else:
             for c in filtered:
-                render_card(c)
+                render_card(c, candidates)
 
     with tab2:
         if not filtered:
