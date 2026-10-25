@@ -1,0 +1,1316 @@
+[
+  {
+    "name": "Chen Li (Alex)",
+    "email": "Alex_chen2024@gmail.com",
+    "phone": "+852 65478923",
+    "location": "Hong Kong, Hong Kong",
+    "geography": "Asia-Pacific",
+    "languages": [
+      "English",
+      "Mandarin Chinese",
+      "Cantonese"
+    ],
+    "education": [
+      {
+        "school": "University of Hong Kong",
+        "degree": "MSc",
+        "field": "Financial Technology",
+        "year_end": 2023
+      },
+      {
+        "school": "University of Hong Kong",
+        "degree": "BBA",
+        "field": "Finance",
+        "year_end": 2021
+      }
+    ],
+    "top_school": true,
+    "credentials": [
+      "MSc Financial Technology",
+      "BBA Finance"
+    ],
+    "experience": [
+      {
+        "firm": "Bank of China Hong Kong",
+        "role": "Investment Analyst",
+        "start_year": 2021,
+        "end_year": 2023,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": null,
+        "sector": [
+          "Technology",
+          "Greater China Equities"
+        ],
+        "strategy": [
+          "Quantitative/Systematic",
+          "Long/Short Equity"
+        ]
+      },
+      {
+        "firm": "Bank of China Hong Kong",
+        "role": "Investment Intern",
+        "start_year": 2019,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": null,
+        "sector": [
+          "Technology",
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Chinese University of Hong Kong",
+        "role": "Research Assistant (Economics Area)",
+        "start_year": 2019,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "academia",
+        "aum_approx": null,
+        "sector": [
+          "Asian Markets"
+        ],
+        "strategy": [
+          "Quantitative/Systematic"
+        ]
+      },
+      {
+        "firm": "Meridian Asia Capital",
+        "role": "Finance Market Department Intern",
+        "start_year": 2019,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "hedge_fund",
+        "aum_approx": null,
+        "sector": [
+          "Chinese Bonds",
+          "Chinese Equities"
+        ],
+        "strategy": [
+          "Credit",
+          "Fundamental Equity"
+        ]
+      }
+    ],
+    "years_experience": 4,
+    "seniority": "Junior (0-3 yrs)",
+    "market_type": [
+      "buy_side"
+    ],
+    "primary_sectors": [
+      "Technology",
+      "Healthcare",
+      "Greater China"
+    ],
+    "primary_strategy": "Quantitative/Systematic",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Python",
+      "R",
+      "SQL",
+      "Excel",
+      "VBA",
+      "Bloomberg Terminal",
+      "WIND Database",
+      "GIS mapping"
+    ],
+    "currently_employed": false,
+    "notable_firms": [
+      "Bank of China Hong Kong",
+      "University of Hong Kong"
+    ],
+    "summary": "Quantitative-focused investment professional with MSc in Financial Technology from University of Hong Kong and 4 years of buy-side experience across Bank of China and academic research. Specialized in systematic trading strategies, multi-factor modeling, and Asian equity markets with demonstrated expertise in Python, R, SQL, and advanced statistical analysis. Developed and managed quantitative models achieving 1.8+ Sharpe ratios and led automation initiatives that improved research efficiency by 25x.",
+    "source_file": "Chen Li (Alex).docx",
+    "parsed_at": "2026-10-25T13:34:58.336130"
+  },
+  {
+    "name": "Marina Silva Costa",
+    "email": "marina.costa.finance@gmail.com",
+    "phone": "+44 (785) 429-1673",
+    "location": "London, United Kingdom",
+    "geography": "Europe",
+    "languages": [
+      "Portuguese",
+      "English",
+      "Spanish"
+    ],
+    "education": [
+      {
+        "school": "MIT Sloan School of Management",
+        "degree": "MBA",
+        "field": "Investment Management",
+        "year_end": 2021
+      },
+      {
+        "school": "Fundacao Getulio Vargas",
+        "degree": "BSc",
+        "field": "Economics",
+        "year_end": 2016
+      }
+    ],
+    "top_school": true,
+    "credentials": [
+      "MBA"
+    ],
+    "experience": [
+      {
+        "firm": "Vanguard Group",
+        "role": "Equity Research Analyst",
+        "start_year": 2021,
+        "end_year": null,
+        "current": true,
+        "firm_type": "asset_manager",
+        "aum_approx": "$8.0T",
+        "sector": [
+          "Healthcare",
+          "Consumer Discretionary",
+          "Telecom"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Vanguard Group",
+        "role": "Equity Research Summer Analyst",
+        "start_year": 2020,
+        "end_year": 2020,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": "$8.0T",
+        "sector": [
+          "Utilities"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Bain & Company",
+        "role": "Business Analyst",
+        "start_year": 2016,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "consulting",
+        "aum_approx": null,
+        "sector": [
+          "Consumer",
+          "Retail",
+          "Logistics",
+          "Infrastructure",
+          "Banking",
+          "Aerospace"
+        ],
+        "strategy": [
+          "Other"
+        ]
+      }
+    ],
+    "years_experience": 9,
+    "seniority": "Mid-level (3-7 yrs)",
+    "market_type": [
+      "buy_side"
+    ],
+    "primary_sectors": [
+      "Healthcare",
+      "Consumer Discretionary",
+      "Emerging Markets"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Python",
+      "R",
+      "Excel",
+      "VBA"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "Vanguard Group",
+      "Bain & Company",
+      "MIT Sloan"
+    ],
+    "summary": "Experienced equity research analyst at Vanguard with strong fundamental research expertise covering healthcare, consumer discretionary, and telecom sectors in emerging markets, particularly Latam and EMEA. MBA from MIT Sloan with prior consulting background at Bain & Company, combining strategic analysis with financial modeling and technical proficiency in Python and R. Track record of developing actionable investment recommendations and managing complex cross-functional initiatives.",
+    "source_file": "MARINA SILVA COSTA.docx",
+    "parsed_at": "2026-10-25T13:35:05.432324"
+  },
+  {
+    "name": "Marcus Chen-Rodriguez",
+    "email": "rchen@hotmail",
+    "phone": "(745) 156-1879",
+    "location": "New York, US",
+    "geography": "US",
+    "languages": [
+      "English"
+    ],
+    "education": [
+      {
+        "school": "Harvard University",
+        "degree": "BA",
+        "field": "Economics, Secondary in Molecular Biology",
+        "year_end": 2013
+      },
+      {
+        "school": "Stanford University",
+        "degree": null,
+        "field": "Healthcare Innovation, Biotechnology Commercialization",
+        "year_end": null
+      }
+    ],
+    "top_school": true,
+    "credentials": [],
+    "experience": [
+      {
+        "firm": "Coatue Management",
+        "role": "Healthcare Analyst, Investment Team",
+        "start_year": 2019,
+        "end_year": null,
+        "current": true,
+        "firm_type": "hedge_fund",
+        "aum_approx": "$40B",
+        "sector": [
+          "Life Sciences Tools & Diagnostics",
+          "MedTech",
+          "Therapeutics & Services",
+          "Digital Health"
+        ],
+        "strategy": [
+          "Long/Short Equity",
+          "Growth Equity",
+          "Venture"
+        ]
+      },
+      {
+        "firm": "Goldman Sachs",
+        "role": "Senior Associate, Investment Team",
+        "start_year": 2017,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": "$18B",
+        "sector": [
+          "Healthcare",
+          "Credit"
+        ],
+        "strategy": [
+          "Credit",
+          "Growth Equity",
+          "Multi-Strategy"
+        ]
+      },
+      {
+        "firm": "Credit Suisse",
+        "role": "Analyst, Healthcare Investment Banking Group",
+        "start_year": 2013,
+        "end_year": 2015,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Therapeutics",
+          "Medical Devices",
+          "Healthcare Services"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      }
+    ],
+    "years_experience": 12,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "buy_side",
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Healthcare",
+      "Digital Health",
+      "MedTech"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": true,
+    "technical_skills": [
+      "Financial modeling",
+      "Excel",
+      "Bloomberg"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "Coatue Management",
+      "Goldman Sachs",
+      "Credit Suisse"
+    ],
+    "summary": "Senior healthcare investment professional with 12 years of experience spanning investment banking, credit strategy, and multi-strategy hedge fund management. Currently a Healthcare Analyst at Coatue Management ($40B AUM) with deep expertise in digital health, AI-enabled diagnostics, and life sciences across both public and private markets. Harvard graduate with track record of generating significant outperformance and sourcing/executing large-scale transactions in healthcare innovation.",
+    "source_file": "Marcus Chen-Rodriguez Resume.docx",
+    "parsed_at": "2026-10-25T13:35:12.207676"
+  },
+  {
+    "name": "Michael Rodriguez",
+    "email": "mrodriguez84@gmail.com",
+    "phone": "317.441.1999",
+    "location": "Boston, MA, US",
+    "geography": "US",
+    "languages": [
+      "English"
+    ],
+    "education": [
+      {
+        "school": "University of Michigan, Ross School of Business",
+        "degree": "BSc",
+        "field": "Finance",
+        "year_end": 2017
+      }
+    ],
+    "top_school": true,
+    "credentials": [
+      "CFA",
+      "Series 7",
+      "Series 63",
+      "Series 87"
+    ],
+    "experience": [
+      {
+        "firm": "Fidelity Asset Management",
+        "role": "Analyst, Consumer Internet & Software",
+        "start_year": 2022,
+        "end_year": null,
+        "current": true,
+        "firm_type": "asset_manager",
+        "aum_approx": "$1-2B",
+        "sector": [
+          "Technology",
+          "Internet",
+          "Software"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "William Blair",
+        "role": "Associate, TMT Equity Research",
+        "start_year": 2019,
+        "end_year": 2022,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Technology",
+          "Media",
+          "Internet"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "William Blair",
+        "role": "Jr. Desk Analyst, Fixed Income Sales & Trading",
+        "start_year": 2018,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Credit"
+        ],
+        "strategy": [
+          "Credit"
+        ]
+      },
+      {
+        "firm": "Guaranteed Rate",
+        "role": "Capital Markets Analyst",
+        "start_year": 2017,
+        "end_year": 2018,
+        "current": false,
+        "firm_type": "corporate",
+        "aum_approx": null,
+        "sector": [
+          "Mortgage",
+          "Fixed Income"
+        ],
+        "strategy": [
+          "Credit"
+        ]
+      },
+      {
+        "firm": "Magnetar Capital Management",
+        "role": "Summer Intern",
+        "start_year": 2016,
+        "end_year": 2016,
+        "current": false,
+        "firm_type": "hedge_fund",
+        "aum_approx": null,
+        "sector": [
+          "Mortgage",
+          "Structured Products"
+        ],
+        "strategy": [
+          "Credit"
+        ]
+      }
+    ],
+    "years_experience": 8,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "buy_side",
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Technology",
+      "Internet",
+      "Credit"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Bloomberg Terminal",
+      "Excel",
+      "Financial Modeling",
+      "Statistical Analysis",
+      "FactSet",
+      "S&P Capital IQ",
+      "SQL"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "Fidelity Asset Management",
+      "William Blair",
+      "Magnetar Capital Management"
+    ],
+    "summary": "CFA Charterholder with 8 years of experience in equity research and asset management, currently an Analyst at Fidelity managing TMT sector investments across $1-2B in AUM. Demonstrates deep expertise in technology and consumer internet coverage with strong financial modeling capabilities and proven track record of delivering insights through primary research and valuation analysis. Previously at William Blair covering TMT as equity research associate and contributing to fixed income trading operations.",
+    "source_file": "Michael Rodriguez, CFA.docx",
+    "parsed_at": "2026-10-25T13:35:20.415579"
+  },
+  {
+    "name": "Omar El-Hassan",
+    "email": "o.elhassan15@gmail.com",
+    "phone": "+33678924531",
+    "location": "Paris, France",
+    "geography": "Europe",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "education": [
+      {
+        "school": "INSA Lyon",
+        "degree": "Dipl\u00f4me d'Ing\u00e9nieur",
+        "field": "Financial Engineering",
+        "year_end": 2022
+      },
+      {
+        "school": "Universit\u00e9 Lyon",
+        "degree": "MSc",
+        "field": "Quantitative Finance",
+        "year_end": 2022
+      },
+      {
+        "school": "\u00c9cole Royale Navale Casablanca",
+        "degree": null,
+        "field": "Mathematics and Physics",
+        "year_end": 2019
+      }
+    ],
+    "top_school": false,
+    "credentials": [
+      "MSc Quantitative Finance"
+    ],
+    "experience": [
+      {
+        "firm": "BNP Paribas CIB",
+        "role": "Quantitative Developer",
+        "start_year": 2022,
+        "end_year": null,
+        "current": true,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Fixed Income"
+        ],
+        "strategy": [
+          "Quantitative/Systematic"
+        ]
+      },
+      {
+        "firm": "BNP Paribas CIB",
+        "role": "Quantitative Developer Intern",
+        "start_year": 2022,
+        "end_year": 2022,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Fixed Income"
+        ],
+        "strategy": [
+          "Quantitative/Systematic"
+        ]
+      },
+      {
+        "firm": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale SGATS (SGCIB)",
+        "role": "Quantitative Strategist Intern",
+        "start_year": 2021,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Fixed Income"
+        ],
+        "strategy": [
+          "Quantitative/Systematic"
+        ]
+      }
+    ],
+    "years_experience": 3,
+    "seniority": "Junior (0-3 yrs)",
+    "market_type": [
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Fixed Income"
+    ],
+    "primary_strategy": "Quantitative/Systematic",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "C++",
+      "C#",
+      "Python",
+      "Java",
+      "R",
+      "SQL",
+      "MongoDB",
+      "Excel",
+      "Machine Learning",
+      "Monte Carlo"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "BNP Paribas",
+      "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale"
+    ],
+    "summary": "Quantitative Developer at BNP Paribas CIB with expertise in derivatives pricing and fixed income modeling. Holds a Master's degree in Quantitative Finance from Universit\u00e9 Lyon and demonstrates strong technical proficiency in C++, Python, and quantitative methods. Experienced in developing trading strategies, pricing models, and performance optimization for yield curve construction.",
+    "source_file": "Omar El-Hassan 202405.pdf",
+    "parsed_at": "2026-10-25T13:35:27.321808"
+  },
+  {
+    "name": "Priya Nakamura",
+    "email": null,
+    "phone": null,
+    "location": "Mumbai, India",
+    "geography": "Asia-Pacific",
+    "languages": [
+      "English"
+    ],
+    "education": [
+      {
+        "school": "Mumbai Institute of Management Studies (MIMS)",
+        "degree": "MBA",
+        "field": "Finance",
+        "year_end": 2013
+      },
+      {
+        "school": "University of Pune",
+        "degree": "MCom",
+        "field": "Commerce",
+        "year_end": 2013
+      },
+      {
+        "school": "Thakur College of Commerce",
+        "degree": "BMS",
+        "field": "Commerce",
+        "year_end": 2007
+      }
+    ],
+    "top_school": false,
+    "credentials": [
+      "MBA"
+    ],
+    "experience": [
+      {
+        "firm": "ICICI Securities",
+        "role": "Lead Healthcare Analyst",
+        "start_year": 2023,
+        "end_year": 2025,
+        "current": true,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals",
+          "Medical Devices",
+          "Diagnostics"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "J.P. Morgan Chase",
+        "role": "Lead Healthcare Analyst",
+        "start_year": 2021,
+        "end_year": 2023,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Jardine Lloyd Thompson",
+        "role": "Lead Pharma Analyst",
+        "start_year": 2020,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Centrum Broking Ltd",
+        "role": "Research Analyst",
+        "start_year": 2017,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Pharmaceuticals",
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Morgan Stanley",
+        "role": "Equity Research Analyst",
+        "start_year": 2015,
+        "end_year": 2016,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Pharmaceuticals",
+          "Specialty Chemicals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Transparent Value",
+        "role": "Equity Research Analyst",
+        "start_year": 2013,
+        "end_year": 2015,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Pharmaceuticals",
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      }
+    ],
+    "years_experience": 12,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Pharmaceuticals",
+      "Healthcare",
+      "Medical Devices"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Excel",
+      "Financial Modeling"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "J.P. Morgan Chase",
+      "Morgan Stanley",
+      "ICICI Securities"
+    ],
+    "summary": "Senior healthcare analyst with 12 years of specialized equity research experience covering the pharmaceutical, hospital, diagnostics, and medical devices sectors across Indian and global markets. Currently Lead Healthcare Analyst at ICICI Securities managing coverage of 32+ companies, with previous roles at J.P. Morgan Chase and Morgan Stanley. Demonstrates deep domain expertise in regulatory compliance, competitive analysis, and value investing frameworks with a track record of arranging investor meetings and supporting fund raises.",
+    "source_file": "Priya Nakamura_sellside_healthcare_RLTM.docx",
+    "parsed_at": "2026-10-25T13:35:36.703052"
+  },
+  {
+    "name": "Ryan Patel",
+    "email": "ryan.patel0403@gmail.com",
+    "phone": "+1 (516) 523-3113",
+    "location": "Brooklyn, NY, USA",
+    "geography": "US",
+    "languages": [
+      "English"
+    ],
+    "education": [
+      {
+        "school": "Columbia Business School, Columbia University",
+        "degree": "BSc",
+        "field": "Business: Finance and International Business",
+        "year_end": 2017
+      }
+    ],
+    "top_school": true,
+    "credentials": [],
+    "experience": [
+      {
+        "firm": "Meridian Capital Partners",
+        "role": "Investment Professional, Generalist \u2013 Soft Catalyst & Fundamental Long/Short",
+        "start_year": 2023,
+        "end_year": null,
+        "current": true,
+        "firm_type": "hedge_fund",
+        "aum_approx": null,
+        "sector": [
+          "Multi-Sector"
+        ],
+        "strategy": [
+          "Long/Short Equity",
+          "Fundamental"
+        ]
+      },
+      {
+        "firm": "Millennium Management",
+        "role": "Investment Analyst, Consumer & TMT \u2013 North53 Capital",
+        "start_year": 2021,
+        "end_year": 2022,
+        "current": false,
+        "firm_type": "hedge_fund",
+        "aum_approx": "$4.2B",
+        "sector": [
+          "Consumer",
+          "Technology/TMT"
+        ],
+        "strategy": [
+          "Long/Short Equity",
+          "Fundamental"
+        ]
+      },
+      {
+        "firm": "Apollo Global Management",
+        "role": "Associate \u2013 Private Equity",
+        "start_year": 2019,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "private_equity",
+        "aum_approx": null,
+        "sector": [
+          "Business Services",
+          "Technology",
+          "Consumer",
+          "Healthcare"
+        ],
+        "strategy": [
+          "Private Equity"
+        ]
+      },
+      {
+        "firm": "J.P. Morgan",
+        "role": "Analyst \u2013 Healthcare Investment Banking",
+        "start_year": 2017,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Biotechnology"
+        ],
+        "strategy": [
+          "M&A Advisory"
+        ]
+      }
+    ],
+    "years_experience": 8,
+    "seniority": "Mid-level (3-7 yrs)",
+    "market_type": [
+      "buy_side",
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Healthcare",
+      "Technology/TMT",
+      "Consumer"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": true,
+    "technical_skills": [
+      "Excel",
+      "Financial Modeling",
+      "DCF Analysis"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "J.P. Morgan",
+      "Apollo Global Management",
+      "Millennium Management"
+    ],
+    "summary": "Investment professional with 8+ years of experience across hedge funds, private equity, and investment banking, with deep expertise in fundamental equity investing and M&A advisory. Currently managing a long/short fundamental equity portfolio at Meridian Capital Partners, following roles at Millennium Management and Apollo Global Management covering healthcare, technology, and consumer sectors. Columbia Business School graduate with proven track record in investment analysis, financial modeling, and portfolio management.",
+    "source_file": "RYAN PATEL - Resume.pdf",
+    "parsed_at": "2026-10-25T13:35:44.453790"
+  },
+  {
+    "name": "Vikram Shah",
+    "email": "Vshah@gmail.com",
+    "phone": "267-328-0909",
+    "location": "New York, US",
+    "geography": "US",
+    "languages": [
+      "English",
+      "Mandarin",
+      "Cantonese"
+    ],
+    "education": [
+      {
+        "school": "Northwestern University - Kellogg School of Management",
+        "degree": "BSc",
+        "field": "Business Administration",
+        "year_end": 2014
+      }
+    ],
+    "top_school": false,
+    "credentials": [
+      "CFA"
+    ],
+    "experience": [
+      {
+        "firm": "Cinctive Capital Management",
+        "role": "Investment Analyst",
+        "start_year": 2021,
+        "end_year": null,
+        "current": true,
+        "firm_type": "hedge_fund",
+        "aum_approx": null,
+        "sector": [
+          "Technology",
+          "Media"
+        ],
+        "strategy": [
+          "Long/Short Equity"
+        ]
+      },
+      {
+        "firm": "Goldman Sachs",
+        "role": "Equity Research Associate",
+        "start_year": 2019,
+        "end_year": 2021,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Technology",
+          "Media",
+          "Internet"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "J.P. Morgan Asset Management",
+        "role": "U.S. Equity, Business Management Associate",
+        "start_year": 2017,
+        "end_year": 2019,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": null,
+        "sector": [
+          "Equity"
+        ],
+        "strategy": [
+          "Multi-Strategy"
+        ]
+      },
+      {
+        "firm": "J.P. Morgan Chase & Co.",
+        "role": "Office of the CFO, Strategy and Analytics Analyst",
+        "start_year": 2016,
+        "end_year": 2017,
+        "current": false,
+        "firm_type": "corporate",
+        "aum_approx": null,
+        "sector": [
+          "Finance"
+        ],
+        "strategy": []
+      },
+      {
+        "firm": "PwC",
+        "role": "Corporate Development & Transaction Services Analyst",
+        "start_year": 2014,
+        "end_year": 2016,
+        "current": false,
+        "firm_type": "consulting",
+        "aum_approx": null,
+        "sector": [
+          "Corporate"
+        ],
+        "strategy": []
+      }
+    ],
+    "years_experience": 11,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "buy_side",
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Technology",
+      "Media",
+      "Internet"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Bloomberg",
+      "FactSet",
+      "Excel",
+      "Financial Modeling"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "Goldman Sachs",
+      "J.P. Morgan"
+    ],
+    "summary": "CFA charterholder with 11 years of experience in equity research and investment analysis, currently at Cinctive Capital Management deploying long/short equity strategies in technology and media sectors. Previously worked at Goldman Sachs as an equity research associate covering internet and interactive entertainment, and at J.P. Morgan across asset management and corporate strategy roles. Demonstrates strong expertise in fundamental analysis, financial modeling, and institutional investor relations.",
+    "source_file": "Vikram Shah.docx",
+    "parsed_at": "2026-10-25T13:35:52.017223"
+  },
+  {
+    "name": "Viktor Sharat",
+    "email": null,
+    "phone": null,
+    "location": "Mumbai, India",
+    "geography": "Asia-Pacific",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "education": [
+      {
+        "school": "Mumbai Institute of Management Studies and Research",
+        "degree": "MBA",
+        "field": "Business Administration",
+        "year_end": 2015
+      },
+      {
+        "school": "Padmashree Dr. D.Y. Patil Institute of Biotechnology and Bioinformatics",
+        "degree": "M.Tech",
+        "field": "Biotechnology and Bioinformatics",
+        "year_end": 2010
+      }
+    ],
+    "top_school": false,
+    "credentials": [
+      "CFA",
+      "MBA"
+    ],
+    "experience": [
+      {
+        "firm": "Axis Mutual Fund",
+        "role": "Research Analyst",
+        "start_year": 2024,
+        "end_year": 2025,
+        "current": true,
+        "firm_type": "asset_manager",
+        "aum_approx": "$1.2B",
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Meridian Capital",
+        "role": "Research Analyst",
+        "start_year": 2023,
+        "end_year": 2024,
+        "current": false,
+        "firm_type": "asset_manager",
+        "aum_approx": null,
+        "sector": [
+          "Renewable Energy",
+          "Infrastructure"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "ICICI Securities Limited",
+        "role": "Research Analyst",
+        "start_year": 2014,
+        "end_year": 2023,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Oil & Gas",
+          "Logistics",
+          "Beverages"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "BioAnalytics Research India Ltd.",
+        "role": "Biomodeller Trainee",
+        "start_year": 2013,
+        "end_year": 2014,
+        "current": false,
+        "firm_type": "other",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Biotechnology"
+        ],
+        "strategy": []
+      },
+      {
+        "firm": "Mumbai Cancer Research Institute",
+        "role": "Research Associate",
+        "start_year": 2012,
+        "end_year": 2013,
+        "current": false,
+        "firm_type": "academia",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Biotechnology"
+        ],
+        "strategy": []
+      }
+    ],
+    "years_experience": 11,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "buy_side",
+      "sell_side"
+    ],
+    "primary_sectors": [
+      "Healthcare",
+      "Renewable Energy",
+      "Infrastructure"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Python",
+      "Machine Learning",
+      "Excel",
+      "Bloomberg"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "ICICI Securities Limited"
+    ],
+    "summary": "Viktor Sharat is a CFA-designated research professional with 11+ years of investment experience, spanning both buy-side asset management and sell-side equity research in India. He has deep expertise in healthcare, renewable energy, and infrastructure sectors, with demonstrated success transitioning from biotech research to fundamental equity analysis. Currently a Research Analyst at Axis Mutual Fund covering pharmaceuticals and specialty chemicals with strong track record of generating institutional-quality insights across multiple market capitalizations.",
+    "source_file": "Viktor Sharat.docx",
+    "parsed_at": "2026-10-25T13:36:00.390486"
+  },
+  {
+    "name": "Dr. Zara Al-Rashid",
+    "email": null,
+    "phone": null,
+    "location": "Mumbai, India",
+    "geography": "Asia-Pacific",
+    "languages": [
+      "English"
+    ],
+    "education": [
+      {
+        "school": "Indian School of Business Management (ISBM)",
+        "degree": "PGDM",
+        "field": "Finance",
+        "year_end": 2012
+      },
+      {
+        "school": "K.J. Somaiya Medical College",
+        "degree": "MBBS",
+        "field": "Medicine",
+        "year_end": 2010
+      }
+    ],
+    "top_school": false,
+    "credentials": [
+      "PGDM",
+      "MBBS"
+    ],
+    "experience": [
+      {
+        "firm": "Meridian Research Partners",
+        "role": "Lead Analyst \u2013 Pharmaceuticals and Healthcare",
+        "start_year": 2022,
+        "end_year": 2025,
+        "current": true,
+        "firm_type": "other",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Prism Financial Services",
+        "role": "Lead Analyst \u2013 Pharmaceuticals and Healthcare",
+        "start_year": 2020,
+        "end_year": 2022,
+        "current": false,
+        "firm_type": "other",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Kotak Securities",
+        "role": "Lead Analyst \u2013 Pharmaceuticals and Healthcare",
+        "start_year": 2018,
+        "end_year": 2020,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare",
+          "Pharmaceuticals"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "DataFlow Research India Pvt. Limited",
+        "role": "Manager \u2013 Equity Research",
+        "start_year": 2015,
+        "end_year": 2018,
+        "current": false,
+        "firm_type": "other",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Leerink Partners",
+        "role": "U.S. Healthcare Services Equity Research Team Member",
+        "start_year": 2015,
+        "end_year": 2018,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "J.P. Morgan Securities",
+        "role": "Equity Research Associate",
+        "start_year": 2013,
+        "end_year": 2014,
+        "current": false,
+        "firm_type": "investment_bank",
+        "aum_approx": null,
+        "sector": [
+          "Healthcare"
+        ],
+        "strategy": [
+          "Fundamental Equity"
+        ]
+      },
+      {
+        "firm": "Cipla Pharmaceuticals",
+        "role": "Summer Intern",
+        "start_year": 2011,
+        "end_year": 2011,
+        "current": false,
+        "firm_type": "corporate",
+        "aum_approx": null,
+        "sector": [
+          "Pharmaceuticals"
+        ],
+        "strategy": []
+      }
+    ],
+    "years_experience": 10,
+    "seniority": "Senior (7+ yrs)",
+    "market_type": [
+      "sell_side",
+      "buy_side"
+    ],
+    "primary_sectors": [
+      "Healthcare",
+      "Pharmaceuticals"
+    ],
+    "primary_strategy": "Fundamental Equity",
+    "public_markets": true,
+    "private_markets": false,
+    "technical_skills": [
+      "Bloomberg",
+      "FactSet",
+      "Reuters",
+      "MS Office",
+      "FDA",
+      "MedPAC",
+      "CMS"
+    ],
+    "currently_employed": true,
+    "notable_firms": [
+      "J.P. Morgan Securities",
+      "Kotak Securities",
+      "Leerink Partners"
+    ],
+    "summary": "Dr. Zara Al-Rashid is a seasoned equity research analyst with 10+ years of specialized expertise in Indian healthcare and pharmaceuticals, having held lead analyst positions at prominent firms including J.P. Morgan Securities and Kotak Securities. She combines deep sector knowledge with strong analytical credentials, including an MBBS and PGDM in Finance, and has been recognized by top institutional investors for her investment recommendations and research quality. Her track record includes generating impactful equity research ratings, publishing sector thematic reports, and driving measurable revenue growth through institutional client engagement.",
+    "source_file": "Zara Al-Rashid.docx",
+    "parsed_at": "2026-10-25T13:36:10.654047"
+  }
+]
