@@ -16,9 +16,9 @@ from pathlib import Path
 from datetime import datetime
 
 # ── Config ────────────────────────────────────────────────────────────────────
-API_KEY = os.environ.get("ANTHROPIC_API_KEY"))
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 MODEL   = "claude-haiku-4-5"       # fast + cheap for structured extraction
-RESUME_DIR = Path("/tmp/claude-0/-home-claude/5b56e0d8-6487-5adc-b7c6-c74ce1c9d2f7/scratchpad/case_study_untrusted")
+RESUME_DIR = Path("resumes/")
 OUT_JSON = Path("/home/claude/candidates.json")
 OUT_CSV  = Path("/home/claude/candidates.csv")
 
@@ -72,7 +72,7 @@ Extract these fields exactly:
 
 Rules:
 - top_school = true if any of: Ivy League, MIT, Stanford, LSE, Oxford, Cambridge, IIT, HKU, INSEAD, Wharton, Chicago Booth, Michigan Ross, MIT Sloan, HBS
-- years_experience = current year (2025) minus first full-time job year
+- years_experience = current year (2026) minus first full-time job year
 - currently_employed = true if most recent role has no end date / says "present"
 - For sectors/strategies, be specific — "Healthcare" not "Finance"
 - If a field is truly unknown, use null
